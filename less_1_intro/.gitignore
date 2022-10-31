@@ -1,3 +1,6 @@
 node_modules
 main.js.LICENSE.txt
 config
+README.md
+review_build
+.gitignore
