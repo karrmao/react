@@ -34,6 +34,7 @@ const element = React.createElement('div', { className: 'greeting' }, [
 
 ReactDOM.render(element, rootElement);
 
+//Mast be in html after rendering in brouser
 /* <div class="greeting">
   <div class="greeting__title">Hello, world!</div>
   <div class="greeting__text">I'm learning React</div>
