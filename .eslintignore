@@ -5,8 +5,3 @@ build
 temp
 tmp
 package-lock.json
-.eslintignore
-.eslintrc.js
-.prettierrc
-babel.config.js 
-package.json
