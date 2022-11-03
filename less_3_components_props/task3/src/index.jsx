@@ -4,9 +4,8 @@ import './styles.scss';
 import './comment.scss';
 // import Comment from './ Comment';
 // import UserInfo from './UserInfo';
-import App from './App';
-
-const rootElement = document.querySelector('#root');
+//import App from './Avatar';
+import Avatar from './Avatar';
 
 // const userInfo = {
 //   name: 'Tom',
@@ -16,6 +15,6 @@ const rootElement = document.querySelector('#root');
 ReactDOM.render(
   //   <Comment user={userInfo} text="Good Jobe" date={new Date('2019-01-01T11:32:19.566Z')} />,
   //   rootElement,
-  <App />,
+  <Avatar />,
   rootElement,
 );
