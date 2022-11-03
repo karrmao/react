@@ -6,11 +6,13 @@ const userInfo = {
   avatarUrl: 'https://avatars1.githubusercontent.com',
 };
 
-const App = () => {
+const rootElement = document.querySelector('#root');
+
+const Avatar = () => {
   return (
     (<Comment user={userInfo} text="Good Jobe" date={new Date('2019-01-01T11:32:19.566Z')} />),
     rootElement
   );
 };
 
-export default App;
+export default Avatar;
