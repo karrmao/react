@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 
 class GoodButton extends Component {
   handlClick(e) {
-    console.log(e);
+    // console.log(e);
+    // console.log(e.target);
     // console.log(e.target.textContent); //=>  Click-me!
     // console.log(e.clientX); //=>  279;
     // console.log(e.type); //=> click
 
-    alert('Good job!');
+    alert(e.target.textContent);
   }
 
   render() {
