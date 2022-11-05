@@ -8,19 +8,6 @@ const getTimeWithOffset = offset => {
   return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
 };
 
-/*******************************************************/
-//test data
-// console.log('function1 curent:', getTimeWithOffset(0));
-// console.log('function2 :', getTimeWithOffset(-2));
-// console.log('function3 :', getTimeWithOffset(+2));
-// //put your code here
-
-// const formatDate2 = date => moment(date).format('LTS');
-
-// const res2 = formatDate2(getTimeWithOffset(0));
-// console.log('res :', res2);
-/*******************************************************/
-
 class Clock extends Component {
   constructor(props) {
     super(props);
@@ -51,3 +38,16 @@ class Clock extends Component {
 export default Clock;
 
 //console.log('LTS :', moment().format('LTS'));
+
+/*******************************************************/
+//test data
+// console.log('function1 curent:', getTimeWithOffset(0));
+// console.log('function2 :', getTimeWithOffset(-2));
+// console.log('function3 :', getTimeWithOffset(+2));
+// //put your code here
+
+// const formatDate2 = date => moment(date).format('LTS');
+
+// const res2 = formatDate2(getTimeWithOffset(0));
+// console.log('res :', res2);
+/*******************************************************/
