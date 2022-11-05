@@ -26,6 +26,7 @@ class Clock extends Component {
     super(props);
 
     this.state = {
+      time: moment(getTimeWithOffset(props.offset)).format('LTS'),
       location: props.location,
     };
 
