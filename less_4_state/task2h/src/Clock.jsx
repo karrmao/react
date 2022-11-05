@@ -1,27 +1,52 @@
 import React, { Component } from 'react';
-import './counter.scss';
+import moment from 'moment';
+import './clock.scss';
 
-let counter = 0;
+const getTimeWithOffset = offset => {
+  const currentTime = new Date();
+  const utcOffset = currentTime.getTimezoneOffset() / 60;
+  return new Date(currentTime.setHours(currentTime.getHours() + offset + utcOffset));
+};
 
-class Counter extends Component {
+/*******************************************************/
+//test data
+// console.log('function1 curent:', getTimeWithOffset(0));
+// console.log('function2 :', getTimeWithOffset(-2));
+// console.log('function3 :', getTimeWithOffset(+2));
+// //put your code here
+
+// const formatDate2 = date => moment(date).format('LTS');
+
+// const res2 = formatDate2(getTimeWithOffset(0));
+// console.log('res :', res2);
+/*******************************************************/
+
+class Clock extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      counter: props.start,
+      location: props.location,
     };
 
     //Do not do this way
     setInterval(() => {
       this.setState({
-        counter: this.state.counter + 1,
+        time: moment(getTimeWithOffset(props.offset)).format('LTS'),
       });
-    }, props.interval);
+    }, 1000);
   }
 
   render() {
-    return <div className="counter">{this.state.counter}</div>;
+    return (
+      <div className="clock">
+        <div className="clock__location">{this.state.location}</div>
+        <div className="clock__time">{this.state.time}</div>
+      </div>
+    );
   }
 }
 
-export default Counter;
+export default Clock;
+
+//console.log('LTS :', moment().format('LTS'));
