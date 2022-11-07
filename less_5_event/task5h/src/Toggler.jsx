@@ -3,25 +3,48 @@ import React, { Component } from 'react';
 class Toggler extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
-      isToggleON: false,
+      statusToggler: 'Off',
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState(state => ({
-      isToggleON: !state.isToggleON,
-    }));
-  }
+  handleClick = () => {
+    this.setState({
+      statusToggler: this.state.statusToggler === 'Off' ? 'On' : 'Off',
+    });
+  };
 
   render() {
     return (
       <div className="toggler" onClick={this.handleClick}>
-        {this.state.isToggleON ? 'On' : 'Off'}
+        {this.state.statusToggler}
       </div>
     );
   }
 }
 
 export default Toggler;
+
+// class Toggler extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       status: 'Off',
+//     };
+//   }
+
+//   changeStatus = () => {
+//     this.setState({
+//       status: this.state.status === 'Off' ? 'On' : 'Off',
+//     });
+//   };
+
+//   render() {
+//     return (
+//       <button onClick={this.changeStatus} className="toggler">
+//         {this.state.status}
+//       </button>
+//     );
+//   }
+// }
