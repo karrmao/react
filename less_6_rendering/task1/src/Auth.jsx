@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Greeting from './Greeting';
-
+import Login from './Login';
+import Logout from './Logout';
 class Auth extends Component {
   constructor(props) {
     super(props);
@@ -25,11 +26,17 @@ class Auth extends Component {
   render() {
     // let button;
     /***V1***/
-    const button = this.state.isLoggedIn ? (
-      <button onClick={this.handeleLogout}>Logout</button>
-    ) : (
-      <button onClick={this.handeleLogin}>Login</button>
-    );
+    // const button = this.state.isLoggedIn ? (
+    //   <Logout onClick={this.handeleLogout} />
+    // ) : (
+    //   <Login onClick={this.handeleLogin} />
+    // );
+
+    //  const button = this.state.isLoggedIn ? (
+    //    <button onClick={this.handeleLogout}>Logout</button>
+    //  ) : (
+    //    <button onClick={this.handeleLogin}>Login</button>
+    //  );
     /***V1***/
 
     // if (this.state.isLoggedIn) {
@@ -37,20 +44,14 @@ class Auth extends Component {
     // } else {
     //   button = <button onClick={this.handeleLogin}>Login</button>;
     // }
-
     return (
       <div className="panel">
         <Greeting isLoggedIn={this.state.isLoggedIn} />
-        <div>{button}</div>
-        {/* in version V2 coment this line(bottom)*/}
-
-        {/***V2****/}
-        {/* {this.state.isLoggedIn ? (
-          <button onClick={this.handeleLogout}>Logout</button>
+        {this.state.isLoggedIn ? (
+          <Logout onLogout={this.handeleLogout} />
         ) : (
-          <button onClick={this.handeleLogin}>Login</button>
-        )} */}
-        {/***V2****/}
+          <Login onLogin={this.handeleLogin} />
+        )}
       </div>
     );
   }
