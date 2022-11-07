@@ -18,7 +18,7 @@ class Toggler extends Component {
   render() {
     return (
       <div className="toggler" onClick={this.handleClick}>
-        *{this.state.isToggleON ? 'On' : 'Off'} status here*
+        {this.state.isToggleON ? 'On' : 'Off'}
       </div>
     );
   }
