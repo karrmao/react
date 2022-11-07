@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 const RED = '#f00';
-const GREEN = '#f0f';
+const GREEN = '#0f0';
 const BLUE = '#00f';
 
 class Colors extends Component {
