@@ -1,0 +1,35 @@
+/* line 1, /Users/user/Documents/react/less_6_rendering/task5h/src/Login.scss */
+* {
+  box-sizing: border-box; }
+
+/* line 5, /Users/user/Documents/react/less_6_rendering/task5h/src/Login.scss */
+body {
+  font-family: Arial, Helvetica, sans-serif; }
+
+/* line 9, /Users/user/Documents/react/less_6_rendering/task5h/src/Login.scss */
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 16, /Users/user/Documents/react/less_6_rendering/task5h/src/Login.scss */
+.status {
+  border: 2px solid #000;
+  height: 32px;
+  border-radius: 16px;
+  overflow: hidden; }
+  /* line 22, /Users/user/Documents/react/less_6_rendering/task5h/src/Login.scss */
+  .status__btn {
+    height: 100%;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    padding: 0 8px; }
+  /* line 31, /Users/user/Documents/react/less_6_rendering/task5h/src/Login.scss */
+  .status__text {
+    padding: 0 8px;
+    line-height: 28px; }
+
+/*# sourceMappingURL=Login.css.map */
