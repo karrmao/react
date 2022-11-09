@@ -35,7 +35,7 @@ class Auth extends Component {
 
   render() {
     if (this.state.isSpinnerTime) {
-      return <Spinner size="100px" />;
+      return <Spinner size="50px" />;
     }
     return this.state.isLoggedIn ? (
       <Logout onLogout={this.logoutHendler} />
