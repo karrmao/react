@@ -3,16 +3,12 @@ import Spinner from './Spinner';
 import Login from './Login';
 import Logout from './Logout';
 
-import './index.scss';
-
-const spinnerSize = '10px';
-
 class Auth extends Component {
   constructor(props) {
-    super(props),
-      (this.state = {
-        isLoggedIn: false,
-      });
+    super(props);
+    this.state = {
+      isLoggedIn: false,
+    };
     this.state = {
       isSpinnerTime: false,
     };
@@ -28,7 +24,7 @@ class Auth extends Component {
         isSpinnerTime: false,
         isLoggedIn: true,
       });
-    }, 2000);
+    }, 500);
   };
 
   logoutHendler = () => {
@@ -44,7 +40,7 @@ class Auth extends Component {
     return this.state.isLoggedIn ? (
       <Logout onLogout={this.logoutHendler} />
     ) : (
-      <Logout onLogin={this.loginHendler} />
+      <Login onLogin={this.loginHendler} />
     );
   }
 }
