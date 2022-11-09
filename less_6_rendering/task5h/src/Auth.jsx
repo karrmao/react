@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import Spinner from './Spinner';
 import Login from './Login';
 import Logout from './Logout';
-import Spinner from './Spinner';
+
 import './index.scss';
 
 const spinnerSize = '10px';
