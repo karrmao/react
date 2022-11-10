@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 
 class Dimensions extends Component {
-  //   constructor(props) {
-  //     super(props);
-  //   }
-
   state = {
     width: null,
     height: null,
@@ -28,8 +24,8 @@ class Dimensions extends Component {
 
   setDimensions = (width, height) => {
     this.setState({
-      width: innerWidth,
-      height: innerHeight,
+      width,
+      height,
     });
     document.title = `${innerWidth} x ${innerHeight}`;
   };
