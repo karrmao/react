@@ -17,7 +17,7 @@ class Clock extends Component {
       offset: props.offset,
     };
   }
-  //Do not do this way
+
   componentDidMount() {
     this.interval = setInterval(() => {
       this.setState({
