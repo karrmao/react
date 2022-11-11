@@ -12,7 +12,9 @@ class Search extends Component {
   search = event => {
     //cancel the default behavior↓↓↓
     event.preventDefault();
-    console.log(this.state.value);
+    //console.log(this.state.value);
+    //console.log(`Wellcome ${this.state.value}`);
+    alert(`Search text: ${this.state.value}`);
   };
 
   render() {
