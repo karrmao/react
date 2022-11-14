@@ -13,4 +13,5 @@ const users = [
 const App = () => {
   return <UsersList users={users} />;
 };
+
 export default App;

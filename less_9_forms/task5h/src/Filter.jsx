@@ -6,4 +6,5 @@ const Filter = ({ count, onChange, filterText }) => (
     <input type="text" className="filter__input" onChange={onChange} value={filterText} />
   </div>
 );
+
 export default Filter;
