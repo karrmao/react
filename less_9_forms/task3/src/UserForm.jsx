@@ -11,7 +11,7 @@ class UserForm extends Component {
       {},
     );
     //console.log(formData);
-    this.props.onSubmit(objUser);
+    this.props.onSubmit(formData);
   };
 
   setRef = node => {
@@ -21,14 +21,7 @@ class UserForm extends Component {
 
   render() {
     return (
-      <form
-        className="login-form"
-        ref={this.setRef}
-        onSubmit={event => {
-          event.preventDefault();
-          this.props.onSubmit(this.handleSubmit);
-        }}
-      >
+      <form className="login-form" ref={this.setRef} onSubmit={this.handleSubmit}>
         <h1 className="form-title">Profile</h1>
         <div className="form-control">
           <label className="form-label" htmlFor="name">

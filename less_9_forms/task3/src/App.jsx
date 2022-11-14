@@ -2,8 +2,8 @@ import React from 'react';
 import UserForm from './UserForm';
 
 const App = () => {
-  const createUser = objUser => {
-    console.log(objUser);
+  const createUser = formData => {
+    console.log(formData);
   };
 
   return <UserForm onSubmit={createUser} />;
