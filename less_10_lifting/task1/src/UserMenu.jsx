@@ -9,7 +9,7 @@ const UserMenu = ({ userData }) => {
 
   return (
     <div className="menu">
-      <span className="menu__name">{name}</span>
+      <span className="menu__greeting">{`Hello, ${name}`}</span>
       <img src={avatar_url} alt="User avatar" className="menu__avatar" />
     </div>
   );
