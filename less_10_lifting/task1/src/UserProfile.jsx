@@ -6,7 +6,8 @@ class UserProfile extends Component {
       return null;
     }
 
-    const { name, location, avatar_url } = this.state.userData;
+    //const { name, location, avatar_url } = this.state.userData;
+    const { avatar_url, location, name } = this.props.userData;
 
     return (
       <div>
