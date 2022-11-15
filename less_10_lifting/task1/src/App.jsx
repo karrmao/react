@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import UserMenu from './UserMenu';
 import UserProfile from './UserProfile';
+import UserMenu from './UserMenu';
 
 class App extends Component {
   state = {
@@ -17,6 +17,7 @@ class App extends Component {
       .then(response => response.json())
       .then(userData => this.setState({ userData }));
   };
+
   render() {
     return (
       <div className="page">
