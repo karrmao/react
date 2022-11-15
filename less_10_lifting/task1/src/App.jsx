@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <div className="page">
         <header className="header">
-          <UserMenu />
+          <UserMenu userData={this.state.userData} />
         </header>
         <UserProfile userData={this.state.userData} />
       </div>
