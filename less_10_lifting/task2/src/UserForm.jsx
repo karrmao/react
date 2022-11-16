@@ -12,7 +12,7 @@ const UserForm = ({ userData, handleChange }) => {
       />
       <input
         type="text"
-        name="firstName"
+        name="lastName"
         className="user-form__input"
         value={userData.lastName}
         onChange={handleChange}
