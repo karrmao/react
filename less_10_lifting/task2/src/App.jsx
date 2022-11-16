@@ -26,9 +26,10 @@ class Page extends Component {
     return (
       <div className="page">
         <h1 className="title">{`Hello, ${userData.firstName} ${userData.lastName}`}</h1>
-        <main className="content"></main>
-        <ShoppingCart userData={userData.userData} />
-        <Profile userData={userData} handleChange={this.handleChange} />
+        <main className="content">
+          <ShoppingCart userData={userData.userData} />
+          <Profile userData={userData} handleChange={this.handleChange} />
+        </main>
       </div>
     );
   }
