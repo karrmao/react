@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import ShoppingCart from './ShoppingCart';
 import Profile from './Profile';
 
-class App extends Component {
+class Page extends Component {
   state = {
     userData: {
-      firstName: 'John',
-      lastName: 'Doe',
+      firstName: 'Tom',
+      lastName: 'Form',
     },
   };
 
@@ -34,4 +34,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Page;
