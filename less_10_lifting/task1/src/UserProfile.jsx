@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class UserProfile extends Component {
   render() {
-    if (this.props.userData) {
+    if (!this.props.userData) {
       return null;
     }
 
