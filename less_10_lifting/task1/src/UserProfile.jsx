@@ -6,17 +6,14 @@ class UserProfile extends Component {
       return null;
     }
 
-    //const { name, location, avatar_url } = this.props.userData;
-    const { avatar_url, location, name } = this.props.userData;
+    const { name, location, avatar_url } = this.props.userData;
 
     return (
-      <div>
-        <div className="user">
-          <img alt="User Avatar" src={avatar_url} className="user__avatar" />
-          <div className="user__info">
-            <span className="user__name">{name}</span>
-            <span className="user__location">{location}</span>
-          </div>
+      <div className="user">
+        <img alt="User Avatar" src={avatar_url} className="user__avatar" />
+        <div className="user__info">
+          <span className="user__name">{name}</span>
+          <span className="user__location">{location}</span>
         </div>
       </div>
     );
