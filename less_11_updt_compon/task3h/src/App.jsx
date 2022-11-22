@@ -1,32 +1,16 @@
 import React, { Component } from 'react';
-import Dialog from './Dialog';
+import Expand from './Expand';
 
 class App extends Component {
-  state = {
-    isOpen: false,
-  };
-
-  hideDialog = () => {
-    this.setState({
-      isOpen: false,
-    });
-  };
-
-  showDialog = () => {
-    this.setState({
-      isOpen: true,
-    });
-  };
-
   render() {
     return (
       <div className="app">
-        <button onClick={this.showDialog} className="btn">
-          Show
-        </button>
-        <Dialog isOpen={this.state.isOpen} onClose={this.hideDialog} title="some title">
-          <p>Some text</p>
-        </Dialog>
+        <Expand title="Some title">
+          <p>
+            Hooks are a new addition in React 16.8. They let you use state and other React features
+            without writing a class.
+          </p>
+        </Expand>
       </div>
     );
   }
