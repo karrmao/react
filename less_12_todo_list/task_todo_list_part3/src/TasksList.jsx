@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Task from './Task';
 import CreateTaskInput from './CreateTaskInput';
 import { createTask, fetchTasksList, updateTask, deleteTask } from './tasksGateway';
-//Algo #1
-//const baseUrl = 'https://crudcrud.com/api/a04a832414524a4baed95f2560931ca4/tasks';
 
 class TasksList extends Component {
   state = {
@@ -23,12 +21,12 @@ class TasksList extends Component {
   onCreate = text => {
     const newTask = {
       text,
-      done: false, //default
+      done: false,
     };
 
     createTask(newTask).then(() => this.fetchTasks());
   };
-  //add class line
+
   handleTaskStatusChange = id => {
     const { done, text } = this.state.tasks.find(task => task.id === id);
     const updatedTask = {
@@ -39,14 +37,11 @@ class TasksList extends Component {
     updateTask(id, updatedTask).then(() => this.fetchTasks);
   };
 
-  //delete Task
   handleTaskDelete = id => {
     deleteTask(id).then(() => this.fetchTasks);
   };
 
   render() {
-    //sort done or not
-    //slice(it doesn't mutate)
     const sortedList = this.state.tasks.slice().sort((a, b) => a.done - b.done);
     //
     return (
@@ -54,7 +49,6 @@ class TasksList extends Component {
         <CreateTaskInput onCreate={this.onCreate} />
         <ul className="list">
           {sortedList.map(task => (
-            //console.log('task', task),
             <Task
               key={task.id}
               {...task}
@@ -67,6 +61,4 @@ class TasksList extends Component {
     );
   }
 }
-
 export default TasksList;
-//const baseUrl = 'https://62da6554e56f6d82a760650f.mockapi.io/api/todolist/v1/todoTasks';
