@@ -43,7 +43,7 @@ export const deleteTask = taskId => {
     method: 'DELETE',
   }).then(response => {
     if (!response.ok) {
-      throw new Error('Faild to delite task');
+      throw new Error('Faild to delete task');
     }
   });
 };
