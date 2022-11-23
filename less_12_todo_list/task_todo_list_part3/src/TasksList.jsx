@@ -34,11 +34,11 @@ class TasksList extends Component {
       done: !done,
     };
 
-    updateTask(id, updatedTask).then(() => this.fetchTasks);
+    updateTask(id, updatedTask).then(() => this.fetchTasks());
   };
 
   handleTaskDelete = id => {
-    deleteTask(id).then(() => this.fetchTasks);
+    deleteTask(id).then(() => this.fetchTasks());
   };
 
   render() {
