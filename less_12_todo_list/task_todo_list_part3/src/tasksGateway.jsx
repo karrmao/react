@@ -42,7 +42,7 @@ export const deleteTask = taskId => {
   return fetch(`${baseUrl}/${taskId}`, {
     method: 'DELETE',
   }).then(response => {
-    if (response.ok) {
+    if (!response.ok) {
       throw new Error('Faild to delite task');
     }
   });
