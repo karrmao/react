@@ -34,7 +34,7 @@ export const updateTask = (taskId, taskData) => {
     body: JSON.stringify(taskData),
   }).then(response => {
     if (!response.ok) {
-      throw new Error('Faild to create new task');
+      throw new Error('Faild to create update task');
     }
   });
 };
@@ -44,7 +44,7 @@ export const deleteTask = taskId => {
     method: 'DELETE',
   }).then(response => {
     if (response.ok) {
-      throw new Error('Faild to create new task');
+      throw new Error('Faild to delite task');
     }
   });
 };
