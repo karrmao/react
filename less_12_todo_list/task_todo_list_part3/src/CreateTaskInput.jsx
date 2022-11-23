@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class CreateTaskInput extends Component {
   state = {
@@ -32,4 +33,5 @@ class CreateTaskInput extends Component {
     );
   }
 }
+
 export default CreateTaskInput;
