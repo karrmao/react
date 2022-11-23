@@ -13,7 +13,6 @@ class CreateTaskInput extends Component {
 
   handleTaskCreate = () => {
     this.props.onCreate(this.state.value);
-    //clear input text
     this.setState({ value: '' });
   };
 
@@ -34,8 +33,3 @@ class CreateTaskInput extends Component {
   }
 }
 export default CreateTaskInput;
-
-//Algo
-//1. Take text from input
-//2. Create task with this text
-//3. Add created task to the list
