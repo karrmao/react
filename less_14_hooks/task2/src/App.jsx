@@ -17,7 +17,7 @@ const App = () => {
             </li>
           </ul>
           <Switch>
-            <Route path="users/:usersId">
+            <Route path="/users/:usersId">
               <User />
             </Route>
             <Route path="/">
