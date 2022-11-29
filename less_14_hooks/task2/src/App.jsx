@@ -24,7 +24,6 @@ const App = () => {
               <span>Select a user please</span>
             </Route>
           </Switch>
-          https://codepen.io/WispProxy/pen/GqzoYg11=-=----
         </div>
       </Router>
     </div>
