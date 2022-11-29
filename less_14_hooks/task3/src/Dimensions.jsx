@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-const User = () => {
+const Dimensions = () => {
   const [userData, setUserData] = useState(null);
   const { userId } = useParams();
 
@@ -34,4 +34,4 @@ const User = () => {
     </div>
   );
 };
-export default User;
+export default Dimensions;
