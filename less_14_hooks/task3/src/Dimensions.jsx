@@ -16,7 +16,7 @@ const Dimensions = () => {
 
     return () => {
       debugger;
-      window.addEventListener('resize', handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
