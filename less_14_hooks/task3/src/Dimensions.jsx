@@ -1,36 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 const Dimensions = () => {
-  const [userData, setUserData] = useState(null);
-  const { userId } = useParams();
+  const [demensions, setDemensions] = useState({ width: null, height: null });
 
   useEffect(() => {
-    fetch(`https://api.github.com/users/${userId}`)
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-        throw new Error();
-      })
-      .then(userData => {
-        setUserData(userData);
-      });
-  }, [userId]);
+    const { innerHeight, innerWidth } = window;
+    setDemensions({ width: innerWidth, height: innerHeight });
 
-  if (!userData) {
-    return null;
-  }
+    const handleResize = e => {
+      const { innerHeight, innerWidth } = e.target;
+      setDemensions({ width: innerWidth, height: innerHeight });
+    };
+    window.addEventListener('resize', handleResize);
 
-  const { name, location, avatar_url } = userData;
+    return () => {
+      debugger;
+      window.addEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const { width, height } = demensions;
 
   return (
-    <div className="user">
-      <img alt="User Avatar" src={avatar_url} className="user__avatar" />
-      <div className="user__info">
-        <span className="user__name">{name}</span>
-        <span className="user__location">{location}</span>
-      </div>
+    <div className="dimensions">
+      `${width}px - ${height}px`
     </div>
   );
 };

@@ -1,10 +1,10 @@
-import React { useState } from 'react';
-import Dimensions from '/Dimensions'
+import React, { useState } from 'react';
+import Dimensions from './Dimensions';
 
 const Demo = () => {
   const [isVisible, setIsVisible] = useState(true);
-  
- return (
+
+  return (
     <div>
       <div>
         <button className="btn" onClick={() => setIsVisible(true)}>
