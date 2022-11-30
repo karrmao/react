@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+//import { useParams } from 'react-router-dom';
 
 const Dimensions = () => {
   const [demensions, setDemensions] = useState({ width: null, height: null });
