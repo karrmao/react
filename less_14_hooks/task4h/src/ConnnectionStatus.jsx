@@ -6,7 +6,6 @@ const ConnectionStatus = () => {
   useEffect(() => {
     const handleStatus = e => {
       const networkStatus = e.target.navigator.onLine;
-      //console.log(networkStatus);
       return setNetworkStatus(networkStatus);
     };
 
