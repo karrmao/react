@@ -1,5 +1,5 @@
 import React from 'react';
-import ConnectionStatus from './ConnnectionStatus';
+import ConnectionStatus from './ConnectionStatus';
 
 const App = () => {
   return <ConnectionStatus />;
