@@ -4,11 +4,11 @@ import './styles.css';
 
 const rootElement = document.querySelector('#root');
 
-const renderSeconds = (time) => {
-  const seconds = new Date(time).getSeconds();
+const renderSeconds = time => {
+  const secondsX = time.getSeconds();
 
-  const backgroundColor = seconds % 2 === 0 ? '#fff' : '#000';
-  const textColor = seconds % 2 !== 0 ? '#fff' : '#000';
+  const backgroundColor = secondsX % 2 === 0 ? '#fff' : '#000';
+  const textColor = secondsX % 2 !== 0 ? '#fff' : '#000';
 
   const styles = {
     color: textColor,
@@ -17,7 +17,7 @@ const renderSeconds = (time) => {
 
   const element = (
     <div className="seconds" style={styles}>
-      {seconds}
+      {secondsX}
     </div>
   );
 
@@ -27,4 +27,4 @@ const renderSeconds = (time) => {
 //test data
 renderSeconds(new Date());
 
-setInterval(() => renderSeconds(new Date()), 1000);
+setInterval(() => renderSeconds(new Date()), 500);
