@@ -10,8 +10,6 @@ const userData = {
   birthPlace: 'London',
 };
 
-// put your code here
-
 const rootElement = document.querySelector('#root');
 
 ReactDOM.render(<Profile userData={userData} />, rootElement);
