@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
 // class Toggler extends Component {
 //   constructor(props) {
@@ -28,6 +28,7 @@ import React, { Component } from 'react';
 // export default Toggler;
 
 //option 2
+import React, { Component } from 'react';
 class Toggler extends React.Component {
   constructor(props) {
     super(props);
