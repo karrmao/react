@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import moment from 'moment';
-import './clock.scss';
 
 const getTimeWithOffset = offset => {
   const currentTime = new Date();
@@ -12,15 +11,19 @@ class Clock extends Component {
   constructor(props) {
     super(props);
 
+    const localTime = moment(getTimeWithOffset(props.offset)).format('LTS');
+
+    console.log(localTime);
+
     this.state = {
-      time: moment(getTimeWithOffset(props.offset)).format('LTS'),
+      time: localTime,
       location: props.location,
     };
 
     //Do not do this way
     setInterval(() => {
       this.setState({
-        time: moment(getTimeWithOffset(props.offset)).format('LTS'),
+        time: localTime,
       });
     }, 1000);
   }
@@ -34,7 +37,6 @@ class Clock extends Component {
     );
   }
 }
-
 export default Clock;
 
 //console.log('LTS :', moment().format('LTS'));
