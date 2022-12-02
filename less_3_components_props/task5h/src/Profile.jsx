@@ -3,6 +3,7 @@ import moment from 'moment';
 
 const Profile = props => {
   const dateOfBorn = moment(props.userData.birthDate).format('DD MMM YY');
+  console.log(dateOfBorn);
 
   return (
     <div className="profile">
