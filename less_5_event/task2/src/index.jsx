@@ -4,5 +4,4 @@ import './index.scss';
 import GoodButton from './GoodButton';
 
 const rootElement = document.querySelector('#root');
-
 ReactDOM.render(<GoodButton />, rootElement);
