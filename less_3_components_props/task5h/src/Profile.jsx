@@ -3,7 +3,7 @@ import moment from 'moment';
 
 const Profile = props => {
   const dateOfBorn = moment(props.userData.birthDate).format('DD MMM YY');
-  console.log(dateOfBorn);
+  console.log(dateOfBorn); //=> 17 Jan 91
 
   return (
     <div className="profile">
@@ -14,5 +14,4 @@ const Profile = props => {
     </div>
   );
 };
-
 export default Profile;
