@@ -32,7 +32,7 @@ import React, { Component } from 'react';
 class Toggler extends Component {
   constructor(props) {
     super(props);
-    this.state = { isToggleOn: true };
+    this.state = { isToggleOn: false };
 
     // This binding is necessary to make `this` work in the callback
     //this.handleClick = this.handleClick.bind(this);
@@ -47,7 +47,7 @@ class Toggler extends Component {
   render() {
     return (
       <div className="toggler" onClick={this.handleClick}>
-        {this.state.isToggleOn ? 'Off' : 'On'}
+        {this.state.isToggleOn ? 'On' : 'Off'}
       </div>
     );
   }
