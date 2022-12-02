@@ -29,20 +29,20 @@
 
 //option 2
 import React, { Component } from 'react';
-class Toggler extends React.Component {
+class Toggler extends Component {
   constructor(props) {
     super(props);
     this.state = { isToggleOn: true };
 
     // This binding is necessary to make `this` work in the callback
-    this.handleClick = this.handleClick.bind(this);
+    //this.handleClick = this.handleClick.bind(this);
   }
-
-  handleClick() {
+  //handleClick() {
+  handleClick = () => {
     this.setState(prevState => ({
       isToggleOn: !prevState.isToggleOn,
     }));
-  }
+  };
 
   render() {
     return (
