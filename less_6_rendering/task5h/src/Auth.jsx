@@ -9,9 +9,6 @@ class Auth extends Component {
 
     this.state = {
       isLoggedIn: false,
-    };
-
-    this.state = {
       isSpinnerTime: false,
     };
   }
