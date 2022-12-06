@@ -4,5 +4,4 @@ import './index.scss';
 import Page from './Page';
 
 const rootElement = document.querySelector('#root');
-
 ReactDOM.render(<Page />, rootElement);
