@@ -8,5 +8,4 @@ const Offline = () => {
     </div>
   );
 };
-
 export default Offline;
