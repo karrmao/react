@@ -46,14 +46,19 @@ import Logout from './Logout';
 // export default Auth;
 
 class Auth extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      isLoggedIn: false,
-      isSpinnerTime: false,
-    };
-  }
+  //   this.state = {
+  //     isLoggedIn: false,
+  //     isSpinnerTime: false,
+  //   };
+  // }
+
+  state = {
+    isLoggedIn: false,
+    isSpinnerTime: false,
+  };
 
   loginHendler = () => {
     this.setState({
