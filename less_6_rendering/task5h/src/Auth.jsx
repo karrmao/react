@@ -6,9 +6,11 @@ import Logout from './Logout';
 class Auth extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       isLoggedIn: false,
     };
+
     this.state = {
       isSpinnerTime: false,
     };
