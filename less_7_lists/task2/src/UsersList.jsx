@@ -17,9 +17,9 @@ class UsersList extends Component {
     console.log(this.props.users);
     let usersList;
     if (this.state.sorting) {
-      usersList = this.props.users
-        .slice()
-        .sort((a, b) => (this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age));
+      usersList = this.props.users.slice().sort((a, b) => {
+        return this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age;
+      });
     } else {
       usersList = this.props.users;
     }
@@ -38,5 +38,4 @@ class UsersList extends Component {
     );
   }
 }
-
 export default UsersList;
