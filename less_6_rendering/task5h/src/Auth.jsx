@@ -5,7 +5,7 @@ import Logout from './Logout';
 
 class Auth extends Component {
   state = {
-    isLoggedIn: false,
+    isLoggedIn: false, //=> defult[LOGIN]/if true[LOGOUT]
     isSpinnerTime: false,
   };
 
