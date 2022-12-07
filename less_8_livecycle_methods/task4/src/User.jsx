@@ -19,6 +19,8 @@ class User extends Component {
 
   render() {
     const { user } = this.state;
+    console.log(this.state);
+
     if (!user) {
       return null;
     }
@@ -37,5 +39,4 @@ class User extends Component {
     );
   }
 }
-
 export default User;
