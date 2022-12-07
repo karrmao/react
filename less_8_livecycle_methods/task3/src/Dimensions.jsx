@@ -5,14 +5,14 @@ class Dimensions extends Component {
     width: null,
     height: null,
   };
-
+  //sign to window
   componentDidMount() {
     window.addEventListener('resize', this.onResize);
 
     const { innerWidth, innerHeight } = window;
     this.setDimensions(innerWidth, innerHeight);
   }
-
+  //signout to window
   componentWillUnmount() {
     window.removeEventListener('resize', this.onResize);
   }
