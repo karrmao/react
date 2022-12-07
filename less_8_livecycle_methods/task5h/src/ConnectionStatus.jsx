@@ -21,7 +21,9 @@ class ConnectionStatus extends Component {
   }
 
   isConnection = event => {
-    this.setState({ onlineStatus: event.target.navigator.onLine });
+    this.setState({
+      onlineStatus: event.target.navigator.onLine,
+    });
     console.log(event.target.navigator.onLine); //=> false(offLine)/true(onLine)
   };
 
