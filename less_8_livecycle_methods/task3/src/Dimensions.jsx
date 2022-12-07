@@ -34,5 +34,4 @@ class Dimensions extends Component {
     return <div className="dimensions">{`${this.state.width}px - ${this.state.height}px`}</div>;
   }
 }
-
 export default Dimensions;
