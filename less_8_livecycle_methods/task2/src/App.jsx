@@ -2,17 +2,20 @@ import React, { Component } from 'react';
 import Clock from './Clock';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      visibility: true,
-    };
-  }
+  //   this.state = {
+  //     visibility: true,
+  //   };
+  // }
+  state = {
+    visibility: true,
+  };
 
   onToggle = () => {
     this.setState({
-      visibility: !this.state.visibility,
+      visibility: !this.state.visibility, //=>hide clock if click
     });
   };
 
