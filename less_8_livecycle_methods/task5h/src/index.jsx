@@ -4,5 +4,4 @@ import './index.scss';
 import ConnectionStatus from './ConnectionStatus';
 
 const rootElement = document.querySelector('#root');
-
 ReactDOM.render(<ConnectionStatus />, rootElement);
