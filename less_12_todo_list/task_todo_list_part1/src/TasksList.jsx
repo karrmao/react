@@ -19,6 +19,7 @@ class TasksList extends Component {
         <ul className="list">
           {this.state.tasks.map(task => (
             //console.log('task', task),
+            //=>{text: 'Buy milk', done: false, id: 1}
             <Task key={task.id} {...task} />
           ))}
         </ul>
