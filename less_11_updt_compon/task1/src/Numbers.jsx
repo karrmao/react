@@ -8,7 +8,6 @@ class Numbers extends PureComponent {
   //     }
   //     return true;
   //   }
-
   render() {
     return (
       <div className="number">
