@@ -21,8 +21,9 @@ class App extends Component {
         });
       });
   };
-
   render() {
+    //console.log(userData);
+
     return (
       <div className="page">
         <header className="header">
@@ -33,5 +34,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
