@@ -16,6 +16,7 @@ class App extends Component {
     this.setState({
       userData: {
         ...this.state.userData,
+        //=> if chan firstName, not touching lastName
         [name]: value,
       },
     });
@@ -34,5 +35,4 @@ class App extends Component {
     );
   }
 }
-
 export default App;
