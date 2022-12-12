@@ -48,7 +48,6 @@ class TasksList extends Component {
   handleTaskDelete = id => {
     // 1. Filter tasks
     // 2. Update state
-
     //will leave task whose does not match with id()
     const updatedTasks = this.state.tasks.filter(task => task.id !== id);
     //update Tasks
@@ -78,7 +77,6 @@ class TasksList extends Component {
     );
   }
 }
-
 export default TasksList;
 //<Task id={task.id} done={task.done} text={task.text} />
 // {this.state.tasks.map(task => ) change=>  sortedList.map(task => )
