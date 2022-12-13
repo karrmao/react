@@ -19,12 +19,17 @@ class App extends Component {
   };
 
   render() {
+    console.log(this.state);
     return (
       <div className="app">
         <button onClick={this.showDialog} className="btn">
           Show
         </button>
-        <Dialog isOpen={this.state.isOpen} onClose={this.hideDialog} title="some title">
+        <Dialog
+          isOpen={this.state.isOpen}
+          onClose={this.hideDialog}
+          title="some title"
+        >
           <p>Some text</p>
         </Dialog>
       </div>
