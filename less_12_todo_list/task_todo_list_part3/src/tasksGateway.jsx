@@ -21,7 +21,9 @@ export const fetchTasksList = () => {
         return res.json();
       }
     })
-    .then(tasksList => tasksList.map(({ _id, ...task }) => ({ id: _id, ...task })));
+    .then(tasksList =>
+      tasksList.map(({ _id, ...task }) => ({ id: _id, ...task })),
+    );
 };
 
 export const updateTask = (taskId, taskData) => {

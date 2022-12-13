@@ -3,7 +3,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 const Task = ({ done, text, onChange, id, onDelete }) => {
-  const listItemClasses = classNames('list-item', { 'list-item_done': done });
+  const listItemClasses = classNames('list-item', {
+    'list-item_done': done,
+  });
   return (
     <li className={listItemClasses}>
       <input
@@ -13,7 +15,10 @@ const Task = ({ done, text, onChange, id, onDelete }) => {
         onChange={() => onChange(id)}
       />
       <span className="list-item__text">{text}</span>
-      <button className="list-item__delete-btn " onClick={() => onDelete(id)}></button>
+      <button
+        className="list-item__delete-btn "
+        onClick={() => onDelete(id)}
+      ></button>
     </li>
   );
 };
@@ -30,5 +35,4 @@ Task.defaultProps = {
   done: false,
   text: '',
 };
-
 export default Task;
