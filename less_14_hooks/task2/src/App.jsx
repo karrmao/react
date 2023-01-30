@@ -1,5 +1,12 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable arrow-body-style */
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+} from 'react-router-dom';
 import User from './User';
 
 const App = () => {
